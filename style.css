@@ -1,0 +1,128 @@
+/* Reset styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+/* Sections styling */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Section 1: Wave Animation */
+#wave-section {
+  background-color: #000;
+}
+
+/* Section 2: Text with Hover Effects */
+#text-section {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-text {
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: #fff;
+  cursor: default;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.fade-text:hover {
+  opacity: 0.7;
+}
+
+.text-container h1 {
+  margin-bottom: 1.5em;
+}
+
+.hidden-number {
+  position: absolute;
+  font-size: 0.75rem;
+  opacity: 0.1; /* Slightly visible when not hovered */
+  color: #fff;
+  transition: opacity 0.5s;
+  text-decoration: none; /* Remove underline */
+}
+
+.hidden-number:hover {
+  opacity: 0.7;
+  text-decoration: none; /* Ensure underline doesn't appear on hover */
+}
+
+/* Section 3: Jellyfish Animation */
+#jellyfish-section {
+  background-color: #000;
+}
+
+/* Canvas styling */
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom Links Styling */
+.bottom-links {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-links a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.2;
+  transition: opacity 0.5s;
+}
+
+.bottom-links a:hover {
+  opacity: 0.7;
+}
+
+/* Page 2 Styling */
+#page2-section {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.page2-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page2-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page2-container p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
