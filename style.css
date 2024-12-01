@@ -1,0 +1,224 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Sections styling */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Section 1: Wave Animation */
+#wave-section {
+  background-color: #000;
+}
+
+/* Section 2: Text with Hover Effects */
+#text-section {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-text {
+  color: rgba(255, 255, 255, 0.2); /* Faint color */
+  transition: color 0.5s;
+  cursor: pointer;
+  margin: 0;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.fade-text.active,
+.fade-text:hover {
+  color: rgba(255, 255, 255, 0.7); /* Brighter on hover or active */
+}
+
+/* Remove underline and add animation to '42 is the Answer' link */
+#answer-line a {
+  position: relative;
+  animation: glow 2s infinite;
+}
+
+#answer-line a:hover,
+#answer-line a.active {
+  color: rgba(255, 255, 255, 0.7); /* Increase brightness on hover or active */
+}
+
+/* Define the keyframes for the glow effect */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1),
+                 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 30px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1),
+                 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Blank line styling */
+.blank-line {
+  height: 1.5em; /* Adjust the height to control spacing */
+}
+
+/* Section 3: Jellyfish Animation */
+#jellyfish-section {
+  background-color: #000;
+}
+
+/* Canvas styling */
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Bottom Links Styling */
+.bottom-links {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-links a {
+  margin: 0 15px;
+  color: rgba(255, 255, 255, 0.2); /* Faint color */
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.bottom-links a:hover,
+.bottom-links a:active {
+  color: rgba(255, 255, 255, 0.7); /* Brighter on hover or active */
+}
+
+/* Page 2 Styling */
+#page2-section {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.page2-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page2-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.page2-container p {
+  line-height: 1.6;
+  margin-bottom: 20px; /* Added spacing between paragraphs */
+  font-size: 1rem;
+}
+
+/* Styling for the smaller jellyfish animation container */
+.jellyfish-container-small {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0; /* Spacing between paragraphs */
+}
+
+#jellyfishCanvasSmall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Ensure the canvas doesn't display as a rectangle */
+.jellyfish-container-small canvas {
+  display: block;
+}
+
+/* Responsive Styles for Phones */
+@media (max-width: 768px) {
+  /* Adjust 'fade-text' font size for smaller screens */
+  .fade-text {
+    font-size: 2.5rem;
+  }
+
+  .text-container h1 {
+    margin-bottom: 1em;
+  }
+
+  /* Adjust blank line height for smaller screens */
+  .blank-line {
+    height: 1em;
+  }
+
+  .page2-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .page2-container p {
+    font-size: 0.9rem;
+  }
+
+  .bottom-links {
+    bottom: 10px;
+  }
+
+  .bottom-links a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust font sizes for smaller screens */
+  .fade-text {
+    font-size: 2rem;
+  }
+
+  .page2-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .page2-container p {
+    font-size: 0.8rem;
+  }
+}
