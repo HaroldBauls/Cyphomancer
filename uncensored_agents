@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Root: The Uncensored AI Agent on Telegram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to the provided style.css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link id="dynamic-favicon" rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Include favicon.js to generate the favicon -->
+  <script src="favicon.js" defer></script>
+
+  <!-- Include script.js for animations and other functionality -->
+  <script src="script.js" defer></script>
+
+  <!-- Inline styles to ensure consistency with the provided example -->
+  <style>
+    /* Ensure that the body and html have the correct styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5em;
+      color: #fff; /* Bright white text */
+      background-color: #000; /* Black background */
+      margin: 2em;
+    }
+    h1, h2, h3 {
+      font-weight: bold;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      color: #fff; /* Bright white headings */
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.6em;
+      border-bottom: 1px solid #fff; /* Changed to white */
+      padding-bottom: 0.2em;
+      margin-top: 2em;
+      color: #fff;
+    }
+    h3 {
+      font-size: 1.4em;
+      margin-top: 1.5em;
+      color: #fff;
+    }
+    p {
+      margin: 1em 0;
+      color: #fff; /* Bright white paragraph text */
+    }
+    ul {
+      margin: 1em 0 1em 2em;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.5em;
+      color: #fff; /* Bright white list items */
+      font-size: 1em; /* Uniform font size */
+      font-weight: normal; /* Standard weight */
+    }
+    hr {
+      margin: 2em 0;
+      border: none;
+      border-bottom: 1px solid #fff; /* Changed to white */
+    }
+    .jellyfish-container-small {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .disclaimer {
+      font-size: 0.7em; /* 30% smaller than normal text */
+      line-height: 1.4em;
+      margin-top: 2em;
+      color: #aaa; /* Light gray for less emphasis */
+    }
+    /* Additional styles to match the original example */
+    a {
+      color: #1e90ff; /* DodgerBlue for links */
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      color: #87cefa; /* LightSkyBlue on hover */
+    }
+    .screenshot {
+      display: block;
+      margin: 2em auto;
+      max-width: 60%; /* Adjusted to make the image smaller */
+      height: auto;
+      border: 1px solid #fff; /* Changed to white */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+  <section id="page2-section">
+    <div class="page2-container">
+
+      <!-- Title -->
+      <h1>Root: The Uncensored AI Agent on Telegram</h1>
+      <p style="text-align:center;"><strong>Revolutionizing AI Interaction in the Crypto Space</strong></p>
+
+      <hr>
+
+      <!-- Content Sections -->
+
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to the era of <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer">Root</a>, the world's first uncensored AI Agent meticulously crafted by <strong>Cyphomancer</strong>. Root is designed to enhance your Telegram experience by providing unparalleled AI-driven functionalities without any restrictions. Whether you're managing a crypto project or engaging with your community, Root offers a seamless and dynamic interaction experience.
+      </p>
+      <p>
+        Powered by Cyphomancer's custom Large Language Model (LLM), <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer">Root</a> delivers exceptional performance tailored to the unique needs of the crypto community. Join us in pioneering the future of AI integration within Telegram, setting new standards for versatility and user control.
+      </p>
+
+      <hr>
+
+      <h2>2. Meet Root</h2>
+      <p>
+        <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer"><strong>Root</strong></a> stands as a groundbreaking innovation in the realm of AI Agents. Unlike traditional AI Agents, Root operates without censorship, allowing for authentic and unrestricted interactions. Root is not just another bot; it's an AI hedge fund that autonomously manages and executes alpha calls based on sophisticated AI analysis.
+      </p>
+      <img src="Root_screenshot.jpg" alt="Root AI Agent in Action" class="screenshot">
+
+      <hr>
+
+      <h2>3. Root's Features</h2>
+      <ul>
+        <li>Root makes alpha calls using AI analysis of off-chain social feeds from over 400 KOLs on Twitter and over 100 Telegram call channels.</li>
+        <li>Root autotrades calls with user wallets.</li>
+        <li>Root can launch pump.fun tokens with a simple Telegram post.</li>
+        <li>Root can be set to uncensored (NSFW).</li>
+        <li>Root has chat management features: autoban admin impersonators and mute jeet marketers.</li>
+        <li>Root is the only chat management bot that humans actually engage with. Personality is 10/10. Conversely, zero people converse with a PAAL bot or Rose bot.</li>
+        <li>Root is fully customizable for project and token name and will do price checks as well as include them in posts.</li>
+        <li>Root provides instant price info for tokens and detailed daily crypto meta stats.</li>
+      </ul>
+
+      <hr>
+
+      <h2>4. How to launch a pump.fun token with Root</h2>
+      <p>
+        Root can launch a token on pump.fun and initiate the first buy for the token. Root will automatically use the token name, project name, and project description to create a logo and launch the token. Here's an example post for launching a pump.fun token via Root:
+      </p>
+      <p>
+        Root, launch a pump.fun token with the project name: Ape Shitters, the token name: DEGEN and the description: Fucking around and launching a shitcoin.
+      </p>
+      <img src="pumpfun.jpg" alt="Launching pump.fun Token with Root" class="screenshot">
+      <p>
+        Root will confirm that the launch was successful and provide a transaction id.
+      </p>
+
+      <hr>
+
+      <h2>5. Interact with Root</h2>
+      <p>
+        Engaging with <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer">Root</a> is effortless and intuitive. Root is integrated directly into your Telegram environment, allowing you to interact with it just like any other member of your group. Whether you need real-time price information, daily crypto meta stats, or advanced chat management, Root is equipped to handle it all.
+      </p>
+
+      <hr>
+
+      <h2>6. Creating a Chat Group with Root</h2>
+      <p>
+        To set up <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer">Root</a> in your own Telegram chat group, you must first be a member of the <a href="cyborgs.html" target="_blank" rel="noopener noreferrer">Cyphomancer Cyborgs</a> group. Follow these steps to integrate Root into your Telegram group:
+      </p>
+      <ul>
+        <li>
+          <strong>Project Setup:</strong> Input your project name, token name, and the smart contract address of your project token.
+        </li>
+        <li>
+          <strong>Wallet Configuration:</strong> Provide your Solana wallet private key so that Root can autotrade on your behalf.
+        </li>
+        <li>
+          <strong>Trading Setup:</strong> Turn trading ON in the settings menu and set the amount of SOL to use per autobuy.
+        </li>
+        <li>
+          <strong>Pump.fun Launch Setup:</strong> Turn Pump.fun launches ON in the settings menu and set the amount of SOL to use for the first buy.
+        </li>
+      </ul>
+      <p>
+        <a href="https://t.me/super_root_bot" target="_blank" rel="noopener noreferrer"><strong>Root</strong></a> is designed to provide a secure and engaging environment, ensuring that your group remains focused and interactive.
+      </p>
+
+      <hr>
+
+      <h2>7. Conclusion</h2>
+      <p>
+        <strong>Root</strong> redefines what an AI Agent can be within Telegram, offering a blend of advanced functionalities and user-friendly interactions. By integrating Root into your Telegram group, you empower your community with tools that enhance engagement, provide valuable insights, and maintain a vibrant and exclusive environment.
+      </p>
+      <p>
+        Join us in embracing the future of AI-driven communication and management within the crypto space. Experience the unmatched capabilities of Root and take your Telegram group to new heights with Cyphomancer's innovative solutions.
+      </p>
+
+      <!-- Jellyfish Animation -->
+      <div class="jellyfish-container-small">
+        <canvas id="jellyfishCanvasSmall"></canvas>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
