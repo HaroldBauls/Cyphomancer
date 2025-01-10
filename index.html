@@ -1,0 +1,222 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyphomancer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link id="dynamic-favicon" rel="icon" type="image/png" href="#">
+
+  <!-- Include favicon.js to generate the favicon -->
+  <script src="favicon.js" defer></script>
+
+  <!-- Include script.js for animations and other functionality -->
+  <script src="script.js" defer></script>
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Black background for contrast */
+      color: #fff; /* Bright white text */
+    }
+
+    /* Wave Section */
+    #wave-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #waveCanvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 3rem;
+    }
+
+    /* Pulsating Dark White for Main Title */
+    #main-title {
+      font-size: 4rem;
+      text-align: center;
+      margin-top: 1rem;
+      color: #bbb; /* Darker white */
+      animation: pulsate-darker-white 2s infinite;
+    }
+
+    @keyframes pulsate-darker-white {
+      0% { text-shadow: 0 0 5px #bbb, 0 0 10px #ccc; }
+      50% { text-shadow: 0 0 15px #bbb, 0 0 20px #ddd; }
+      100% { text-shadow: 0 0 5px #bbb, 0 0 10px #ccc; }
+    }
+
+    /* Light Blue Headings */
+    .leader-text {
+      font-size: 2.2rem;
+      color: #87CEEB; /* Light blue */
+      text-align: center;
+      margin: 1rem auto;
+      line-height: 1.3;
+      max-width: 90%;
+    }
+
+    /* Slightly dimmer body text */
+    .dimmed-text {
+      font-size: 1.3rem;
+      color: #ccc;
+      text-align: center;
+      margin: 1rem auto;
+      line-height: 1.3;
+      max-width: 90%;
+    }
+
+    /* Pulsating Dark Gold for "World’s first and still only" */
+    .gold-pulsate {
+      color: #B8860B; /* Darker gold */
+      animation: pulsate-gold 2s infinite;
+    }
+
+    @keyframes pulsate-gold {
+      0% { text-shadow: 0 0 5px #B8860B, 0 0 10px #DAA520; }
+      50% { text-shadow: 0 0 15px #B8860B, 0 0 25px #FFD700; }
+      100% { text-shadow: 0 0 5px #B8860B, 0 0 10px #DAA520; }
+    }
+
+    /* Pulsating red for "42 is the Answer" */
+    #answer-line {
+      font-size: 1.7rem; 
+      text-align: center;
+      color: #8B0000;
+      animation: pulsate-dark-red 2s infinite;
+      margin: 1rem auto;
+    }
+
+    @keyframes pulsate-dark-red {
+      0% { text-shadow: 0 0 5px #8B0000, 0 0 10px #FF0000; }
+      50% { text-shadow: 0 0 15px #8B0000, 0 0 25px #FF4500; }
+      100% { text-shadow: 0 0 5px #8B0000, 0 0 10px #FF0000; }
+    }
+
+    /* Remove default link styles */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* Jellyfish Section */
+    #jellyfish-section {
+      position: relative;
+    }
+
+    #jellyfishCanvas {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Footer links */
+    .bottom-links {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .bottom-links a {
+      margin: 0 8px;
+      font-size: 1.3rem;
+      color: #ccc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Section 1: Wave Animation -->
+  <section id="wave-section">
+    <canvas id="waveCanvas"></canvas>
+  </section>
+
+  <!-- Section 2: Text Section -->
+  <section id="text-section">
+    <div class="text-container">
+      <h1 id="main-title">Cyphomancer</h1>
+
+      <p class="leader-text"><b>
+        THE WORLD LEADER OF AI AGENT INNOVATION IN CRYPTO
+      </b></p>
+
+      <p class="dimmed-text"><b>
+        Our mission is to BUILD the most innovative AI Agent infrastructure FIRST
+      </b></p>
+      <br><br>
+
+      <p class="leader-text"><b>WHAT WE HAVE BUILT:</b></p>
+
+      <p class="dimmed-text">
+        <a href="uncensored_agents"><span class="gold-pulsate">World’s first and still only</span> uncensored AI Agents on Telegram (Root)</a>
+      </p>
+
+      <p class="dimmed-text">
+        <a href="Telegram_Account_To_AI_Agent"><span class="gold-pulsate">World’s first and still only</span> platform to turn your Telegram account into an AI Agent</a>
+      </p>
+
+      <p class="dimmed-text">
+        <a href="gate_bot"><span class="gold-pulsate">World’s first and still only</span> token gating chat group bot where no wallet connection is required (SOL, ETH, BASE, ARB, and BSC)</a>
+      </p>
+
+      <p class="dimmed-text">
+        <a href="desci_agent"><span class="gold-pulsate">World’s first and still only</span> decentralized science (DESCI) AI Agent that automatically analyzes any peer-reviewed published scientific article for fraud using sophisticated figure and text analysis</a>
+      </p>
+      <br><br>
+
+      <p class="leader-text"><b>WHAT WE ARE CURRENTLY BUILDING:</b></p>
+
+      <p class="dimmed-text">
+        <a href="pumpfun_agent">Join the rEVOLUTION and help us grow while we build the first uncensored AI Agent launchpad on pump.fun</a>
+      </p>
+      <br><br>
+
+      <p class="leader-text"><b>WHAT WE WILL BUILD IN THE FUTURE:</b></p>
+
+      <p class="dimmed-text">
+        Merge AI Agents with virtual and augmented reality
+      </p>
+      <br><br>
+
+      <p class="leader-text">
+        <a href="deusexmachina" style="color: #fff;"><b>WHITE PAPER</b></a>
+      </p>
+      <br><br>
+
+      <p class="dimmed-text" id="answer-line">
+        <a href="cyborgs"><b>42 is the Answer</b></a>
+      </p>
+
+      <p class="dimmed-text">
+        CA: CexCXDGoZUWqkSnaovysnHXkF6teX4p8tjhns6rhaCZ2
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: Jellyfish Animation -->
+  <section id="jellyfish-section">
+    <canvas id="jellyfishCanvas"></canvas>
+    <div class="bottom-links">
+      <a href="https://x.com/cyphomancer" target="_blank">X</a>
+      <a href="https://t.me/cyphomancer" target="_blank">Telegram</a>
+      <a href="cyborgs" target="_blank">$42 Whale Group</a>	  
+      <a href="https://www.coingecko.com/en/coins/cyphomancer" target="_blank">Coingecko</a>
+      <a href="https://www.dextools.io/app/en/solana/pair-explorer/58FzEsseAEoSeChxH3RYpQ43d44aAc5FtK7PJvBtN6wd" target="_blank">Dextools</a>
+      <a href="https://github.com/cyphomancer" target="_blank">Github</a>
+	  <a href="Cyphomancer_pitch_deck.pdf" target="_blank">Hackathon</a>
+      <a href="bot_explainer.mp4" target="_blank">Bot Explainer</a>
+      <a href="mailto:support@cyphomancer.com" target="_blank">Email</a>
+    </div>
+  </section>
+</body>
+</html>
