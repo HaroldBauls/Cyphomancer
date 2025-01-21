@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>CYPHOFUN WHITEPAPER</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?display=swap&amp;family=Bruno+Ace+SC%3A300%2C400%2C500%2C600%2C700%2C800%2C900%7CNanum+Gothic+Coding%3A300%2C400%2C500%2C600%2C700%2C800%2C900" media="screen, print">
+<link rel="stylesheet" type="text/css" href="css/normalize.min.css" media="screen, print">
+<link rel="stylesheet" type="text/css" href="css/smartslider.min.css" media="screen, print">
+<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css" media="screen, print">
+<style>div#n2-ss-49 .n2-ss-slider-1{display:grid;box-sizing:border-box;position:relative;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;border:0px solid RGBA(62,62,62,1);border-radius:0px;overflow:hidden;}div#n2-ss-49:not(.n2-ss-loaded) .n2-ss-slider-1{background-image:none !important;}div#n2-ss-49 .n2-ss-slider-2{display:grid;place-items:center;position:relative;overflow:hidden;z-index:10;}div#n2-ss-49 .n2-ss-slider-3{position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-49 .n2-ss-slider-3 > *{grid-area:slide;}div#n2-ss-49.n2-ss-full-page--constrain-ratio .n2-ss-slider-3{height:auto;}div#n2-ss-49 .n2-ss-slide-backgrounds{position:absolute;left:0;top:0;width:100%;height:100%;}div#n2-ss-49 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-49 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;width:100%;height:100%;-webkit-backface-visibility:hidden;z-index:20;}div#n2-ss-49 .n2-ss-slide{perspective:1000px;}div#n2-ss-49 .n2-ss-slider-1{background-color:RGBA(0,0,0,1);}div#n2-ss-49 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-49 .n-uc-qKWqdlnZoTfP{padding:0px 10px 0px 10px}@media (min-width: 1200px){div#n2-ss-49 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-49 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-49 [data-hide-mobileportrait="1"]{display: none !important;}}
+div#n2-ss-58 .n2-ss-slider-1{display:grid;box-sizing:border-box;position:relative;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;border:0px solid RGBA(62,62,62,1);border-radius:0px;overflow:hidden;}div#n2-ss-58:not(.n2-ss-loaded) .n2-ss-slider-1{background-image:none !important;}div#n2-ss-58 .n2-ss-slider-2{display:grid;place-items:center;position:relative;overflow:hidden;z-index:10;}div#n2-ss-58 .n2-ss-slider-3{position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-58 .n2-ss-slider-3 > *{grid-area:slide;}div#n2-ss-58.n2-ss-full-page--constrain-ratio .n2-ss-slider-3{height:auto;}div#n2-ss-58 .n2-ss-slide-backgrounds{position:absolute;left:0;top:0;width:100%;height:100%;}div#n2-ss-58 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-58 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;width:100%;height:100%;-webkit-backface-visibility:hidden;z-index:20;}div#n2-ss-58 .n2-ss-slide{perspective:1000px;}div#n2-ss-58 .n2-font-9418033edc89f814f021d7ee4db56550-hover{font-family: 'Bruno Ace SC';color: #87CEEB;font-size:93.75%;text-shadow: none;line-height: normal;font-weight: normal;font-style: normal;text-decoration: none;text-align: inherit;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 600;}div#n2-ss-58 .n-uc-14f85c5646c61-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-14f85c5646c61-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-142145c1b3a72-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-142145c1b3a72-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading{background: RGBA(255,255,255,0);opacity:1;padding:0px 0px 0px 0px ;box-shadow: none;border: 0px solid RGBA(0,0,0,1);border-radius:0px;}div#n2-ss-58 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:Hover, div#n2-ss-58 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:ACTIVE, div#n2-ss-58 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:FOCUS{border: 1px solid RGBA(69,148,225,1);}div#n2-ss-58 .n-uc-172f92040b042-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-172f92040b042-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading{background: RGBA(255,255,255,0);opacity:1;padding:0px 0px 0px 0px ;box-shadow: none;border: 0px solid RGBA(69,148,225,1);border-radius:0px;}div#n2-ss-58 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:Hover, div#n2-ss-58 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:ACTIVE, div#n2-ss-58 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:FOCUS{border: 1px solid RGBA(69,148,225,1);}div#n2-ss-58 .n-uc-1ed588806dc09-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1ed588806dc09-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1b1d952a596d3-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1b1d952a596d3-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1aaad9f6f3f12-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1aaad9f6f3f12-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-18ceef1295136-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-18ceef1295136-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1bee79f3bbf35-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1bee79f3bbf35-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1c4840a9c70a5-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-1c4840a9c70a5-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner{border-width:1px 0px 0px 0px ;border-style:dashed;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner:HOVER{border-width:1px 0px 0px 0px ;border-style:dashed;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-rzmtJtz6xisv-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n-uc-rzmtJtz6xisv-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-58 .n2-ss-slider-1{background-color:RGBA(0,0,0,1);}div#n2-ss-58 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-58 .n-uc-6TCOsTYRQIUd{padding:10px 10px 10px 10px}div#n2-ss-58 .n-uc-GiIKJw7VHdRv-inner{padding:10px 10px 10px 10px;justify-content:flex-start}div#n2-ss-58 .n-uc-GiIKJw7VHdRv{align-self:center;}div#n2-ss-58 .n-uc-Q6nPRasPZWLu{max-width:685px}div#n2-ss-58 .n-uc-JCoCavxulQAY{max-width:820px}div#n2-ss-58 .n-uc-14f85c5646c61-inner{padding:10px 10px 10px 10px}div#n2-ss-58 .n-uc-14f85c5646c61-inner > .n2-ss-layer-row-inner{width:calc(100% + 21px);margin:-10px;flex-wrap:nowrap;}div#n2-ss-58 .n-uc-14f85c5646c61-inner > .n2-ss-layer-row-inner > .n2-ss-layer[data-sstype="col"]{margin:10px}div#n2-ss-58 .n-uc-14f85c5646c61{max-width:600px}div#n2-ss-58 .n-uc-142145c1b3a72-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-142145c1b3a72{width:12.5%}div#n2-ss-58 .n-uc-172f92040b042-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-172f92040b042{width:12.5%}div#n2-ss-58 .n-uc-1ed588806dc09-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-1ed588806dc09{width:12.5%}div#n2-ss-58 .n-uc-1b1d952a596d3-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-1b1d952a596d3{width:12.5%}div#n2-ss-58 .n-uc-1aaad9f6f3f12-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-1aaad9f6f3f12{width:12.5%}div#n2-ss-58 .n-uc-18ceef1295136-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-18ceef1295136{width:12.5%}div#n2-ss-58 .n-uc-1bee79f3bbf35-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-1bee79f3bbf35{width:12.5%}div#n2-ss-58 .n-uc-1c4840a9c70a5-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-1c4840a9c70a5{width:12.5%}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner{padding:0px 0px 0px 0px}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner > .n2-ss-layer-row-inner{width:calc(100% + 21px);margin:-10px;flex-wrap:nowrap;}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner > .n2-ss-layer-row-inner > .n2-ss-layer[data-sstype="col"]{margin:10px}div#n2-ss-58 .n-uc-rzmtJtz6xisv-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-58 .n-uc-rzmtJtz6xisv{width:100%}@media (min-width: 1200px){div#n2-ss-58 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-58 .n-uc-14f85c5646c61-inner > .n2-ss-layer-row-inner{flex-wrap:nowrap;}div#n2-ss-58 .n-uc-142145c1b3a72{width:12.5%}div#n2-ss-58 .n-uc-172f92040b042{width:12.5%}div#n2-ss-58 .n-uc-1ed588806dc09{width:12.5%}div#n2-ss-58 .n-uc-1b1d952a596d3{width:12.5%}div#n2-ss-58 .n-uc-1aaad9f6f3f12{width:12.5%}div#n2-ss-58 .n-uc-18ceef1295136{width:12.5%}div#n2-ss-58 .n-uc-1bee79f3bbf35{width:12.5%}div#n2-ss-58 .n-uc-1c4840a9c70a5{width:12.5%}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner > .n2-ss-layer-row-inner{flex-wrap:nowrap;}div#n2-ss-58 .n-uc-rzmtJtz6xisv{width:100%}div#n2-ss-58 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-58 .n-uc-6TCOsTYRQIUd{padding:10px 10px 50px 10px}div#n2-ss-58 .n-uc-Q6nPRasPZWLu{--margin-top:80px;--margin-bottom:15px}div#n2-ss-58 .n-uc-JCoCavxulQAY{--ssfont-scale:0.8}div#n2-ss-58 .n-uc-14f85c5646c61-inner > .n2-ss-layer-row-inner{width:calc(100% + 7px);margin:-3px;flex-wrap:wrap;}div#n2-ss-58 .n-uc-14f85c5646c61-inner > .n2-ss-layer-row-inner > .n2-ss-layer[data-sstype="col"]{margin:3px}div#n2-ss-58 .n-uc-14f85c5646c61{max-width:235px}div#n2-ss-58 .n-uc-142145c1b3a72{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-172f92040b042{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-1ed588806dc09{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-1b1d952a596d3{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-1aaad9f6f3f12{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-18ceef1295136{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-1bee79f3bbf35{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-1c4840a9c70a5{width:calc(25% - 6px)}div#n2-ss-58 .n-uc-UQBpZ4cOEusQ-inner > .n2-ss-layer-row-inner{flex-wrap:wrap;}div#n2-ss-58 .n-uc-rzmtJtz6xisv{width:calc(100% - 20px)}div#n2-ss-58 [data-hide-mobileportrait="1"]{display: none !important;}}
+div#n2-ss-51 .n2-ss-slider-1{display:grid;box-sizing:border-box;position:relative;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;border:0px solid RGBA(62,62,62,1);border-radius:0px;overflow:hidden;}div#n2-ss-51:not(.n2-ss-loaded) .n2-ss-slider-1{background-image:none !important;}div#n2-ss-51 .n2-ss-slider-2{display:grid;place-items:center;position:relative;overflow:hidden;z-index:10;}div#n2-ss-51 .n2-ss-slider-3{position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-51 .n2-ss-slider-3 > *{grid-area:slide;}div#n2-ss-51.n2-ss-full-page--constrain-ratio .n2-ss-slider-3{height:auto;}div#n2-ss-51 .n2-ss-slide-backgrounds{position:absolute;left:0;top:0;width:100%;height:100%;}div#n2-ss-51 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-51 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;width:100%;height:100%;-webkit-backface-visibility:hidden;z-index:20;}div#n2-ss-51 .n2-ss-slide{perspective:1000px;}div#n2-ss-51 .n2-font-4654c4f6ceba840afac6c2f3795b78de-hover{font-family: 'Bruno Ace SC';color: #caf0ff;font-size:437.5%;text-shadow: none;line-height: 1;font-weight: normal;font-style: normal;text-decoration: none;text-align: center;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 800;}div#n2-ss-51 .n2-font-f16650958ea985d629b11ae5d320d8ae-hover{font-family: 'Bruno Ace SC';color: #87CEEB;font-size:181.25%;text-shadow: none;line-height: normal;font-weight: normal;font-style: normal;text-decoration: none;text-align: center;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 600;}div#n2-ss-51 .n2-ss-slider-1{background-color:RGBA(0,0,0,1);}div#n2-ss-51 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-51 .n-uc-MNdnzv2R9YcM{padding:10px 10px 10px 10px}div#n2-ss-51 .n-uc-oJrPLjb5xsfb-inner{padding:10px 10px 10px 10px;justify-content:flex-start}div#n2-ss-51 .n-uc-oJrPLjb5xsfb{max-width: 910px;align-self:center;}div#n2-ss-51 .n-uc-ZhyJuiBGH9W6{max-width:800px}div#n2-ss-51 .n-uc-OUUOaWhrvTJS{--margin-top:10px;--margin-bottom:10px}@media (min-width: 1200px){div#n2-ss-51 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-51 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-51 .n-uc-MNdnzv2R9YcM{padding:60px 10px 75px 10px}div#n2-ss-51 .n-uc-oJrPLjb5xsfb-inner{padding:10px 0px 10px 0px}div#n2-ss-51 .n-uc-ZhyJuiBGH9W6{--ssfont-scale:0.5}div#n2-ss-51 .n-uc-OUUOaWhrvTJS{--ssfont-scale:0.6}div#n2-ss-51 [data-hide-mobileportrait="1"]{display: none !important;}}
+div#n2-ss-53 .n2-ss-slider-1{display:grid;box-sizing:border-box;position:relative;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;border:0px solid RGBA(62,62,62,1);border-radius:0px;overflow:hidden;}div#n2-ss-53:not(.n2-ss-loaded) .n2-ss-slider-1{background-image:none !important;}div#n2-ss-53 .n2-ss-slider-2{display:grid;place-items:center;position:relative;overflow:hidden;z-index:10;}div#n2-ss-53 .n2-ss-slider-3{position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-53 .n2-ss-slider-3 > *{grid-area:slide;}div#n2-ss-53.n2-ss-full-page--constrain-ratio .n2-ss-slider-3{height:auto;}div#n2-ss-53 .n2-ss-slide-backgrounds{position:absolute;left:0;top:0;width:100%;height:100%;}div#n2-ss-53 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-53 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;width:100%;height:100%;-webkit-backface-visibility:hidden;z-index:20;}div#n2-ss-53 .n2-ss-slide{perspective:1000px;}div#n2-ss-53 .n2-ss-button-container,div#n2-ss-53 .n2-ss-button-container a{display:block;}div#n2-ss-53 .n2-ss-button-container--non-full-width,div#n2-ss-53 .n2-ss-button-container--non-full-width a{display:inline-block;}div#n2-ss-53 .n2-ss-button-container.n2-ss-nowrap{white-space:nowrap;}div#n2-ss-53 .n2-ss-button-container a div{display:inline;font-size:inherit;text-decoration:inherit;color:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}div#n2-ss-53 .n2-ss-button-container a > div{display:inline-flex;align-items:center;vertical-align:top;}div#n2-ss-53 .n2-ss-button-container span{font-size:100%;vertical-align:baseline;}div#n2-ss-53 .n2-ss-button-container a[data-iconplacement="left"] span{margin-right:0.3em;}div#n2-ss-53 .n2-ss-button-container a[data-iconplacement="right"] span{margin-left:0.3em;}div#n2-ss-53 .n2-font-3f315cd77a9a4e29952c0e50f729ebf2-hover{font-family: 'Nanum Gothic Coding';color: #87CEEB;font-size:131.25%;text-shadow: none;line-height: 1.5;font-weight: normal;font-style: normal;text-decoration: none;text-align: center;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 700;}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1e9a243dc4142-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1e9a243dc4142-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading{background: RGBA(255,255,255,0);opacity:1;padding:0px 0px 0px 0px ;box-shadow: none;border: 0px solid RGBA(0,0,0,1);border-radius:0px;}div#n2-ss-53 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:Hover, div#n2-ss-53 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:ACTIVE, div#n2-ss-53 .n2-style-28fdafd49fbda2870597c9fc73c811c2-heading:FOCUS{border: 1px solid RGBA(69,148,225,1);}div#n2-ss-53 .n-uc-1ff03a70f914f-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1ff03a70f914f-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading{background: RGBA(255,255,255,0);opacity:1;padding:0px 0px 0px 0px ;box-shadow: none;border: 0px solid RGBA(69,148,225,1);border-radius:0px;}div#n2-ss-53 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:Hover, div#n2-ss-53 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:ACTIVE, div#n2-ss-53 .n2-style-01316981c04fbec54b5582abb5ea2d5d-heading:FOCUS{border: 1px solid RGBA(69,148,225,1);}div#n2-ss-53 .n-uc-1a7c21d1aa938-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1a7c21d1aa938-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1c2f959421ff5-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1c2f959421ff5-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1d0ba66a71ef9-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1d0ba66a71ef9-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-18820217f0afd-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-18820217f0afd-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1d574f7629a5e-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-1d574f7629a5e-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-14c5f06994fcc-inner{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n-uc-14c5f06994fcc-inner:HOVER{border-width:0px 0px 0px 0px ;border-style:solid;border-color:RGBA(255,255,255,1);}div#n2-ss-53 .n2-font-daa6ac9bd09ea9e48444acb2464e39d0-link a{font-family: 'Bruno Ace SC';color: #000000;font-size:93.75%;text-shadow: none;line-height: 1.5;font-weight: normal;font-style: normal;text-decoration: none;text-align: center;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 700;}div#n2-ss-53 .n2-style-14119f717e217ab4130a8db5b0f16ee0-heading{background: #ffffff;opacity:1;padding:10px 30px 10px 30px ;box-shadow: none;border: 0px solid RGBA(0,0,0,1);border-radius:0px;}div#n2-ss-53 .n2-style-14119f717e217ab4130a8db5b0f16ee0-heading:Hover, div#n2-ss-53 .n2-style-14119f717e217ab4130a8db5b0f16ee0-heading:ACTIVE, div#n2-ss-53 .n2-style-14119f717e217ab4130a8db5b0f16ee0-heading:FOCUS{background: #00b5ff;}div#n2-ss-53 .n2-font-3892b80f0ab26e3a45586bed4d42b412-hover{font-family: 'Nanum Gothic Coding';color: #ffffff;font-size:68.75%;text-shadow: none;line-height: 1.5;font-weight: normal;font-style: normal;text-decoration: none;text-align: justify;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 700;}div#n2-ss-53 .n2-font-52633639f052034bd679bfb407724a59-hover{font-family: 'Nanum Gothic Coding';color: #87CEEB;font-size:68.75%;text-shadow: none;line-height: 1.5;font-weight: normal;font-style: normal;text-decoration: none;text-align: justify;letter-spacing: normal;word-spacing: normal;text-transform: none;font-weight: 700;}div#n2-ss-53 .n2-ss-slider-1{background-color:RGBA(0,0,0,1);}div#n2-ss-53 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-53 .n-uc-D4INfQnNqaol{padding:10px 10px 10px 10px}div#n2-ss-53 .n-uc-8wRZN8FgDWbD-inner{padding:10px 10px 10px 10px;justify-content:center}div#n2-ss-53 .n-uc-8wRZN8FgDWbD{align-self:center;}div#n2-ss-53 .n-uc-tHu3h6XZ4Xi6{--margin-top:10px;max-width:745px}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner{padding:10px 10px 10px 10px}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner > .n2-ss-layer-row-inner{width:calc(100% + 21px);margin:-10px;flex-wrap:nowrap;}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner > .n2-ss-layer-row-inner > .n2-ss-layer[data-sstype="col"]{margin:10px}div#n2-ss-53 .n-uc-1fa3f3a1fd657{max-width:600px}div#n2-ss-53 .n-uc-1e9a243dc4142-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1e9a243dc4142{width:12.5%}div#n2-ss-53 .n-uc-1ff03a70f914f-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1ff03a70f914f{width:12.5%}div#n2-ss-53 .n-uc-1a7c21d1aa938-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1a7c21d1aa938{width:12.5%}div#n2-ss-53 .n-uc-1c2f959421ff5-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1c2f959421ff5{width:12.5%}div#n2-ss-53 .n-uc-1d0ba66a71ef9-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1d0ba66a71ef9{width:12.5%}div#n2-ss-53 .n-uc-18820217f0afd-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-18820217f0afd{width:12.5%}div#n2-ss-53 .n-uc-1d574f7629a5e-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-1d574f7629a5e{width:12.5%}div#n2-ss-53 .n-uc-14c5f06994fcc-inner{padding:0px 0px 0px 0px;justify-content:center}div#n2-ss-53 .n-uc-14c5f06994fcc{width:12.5%}div#n2-ss-53 .n-uc-V7K0MTlQmHoq{--margin-top:5px;max-width:330px}div#n2-ss-53 .n-uc-ss3zItV8vocu{--margin-top:100px;max-width:745px}div#n2-ss-53 .n-uc-103a5c4a59c21{--margin-top:15px;max-width:745px}div#n2-ss-53 .n-uc-eCrMET2PnNmF{--margin-top:25px;max-width:745px}@media (min-width: 1200px){div#n2-ss-53 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner > .n2-ss-layer-row-inner{flex-wrap:nowrap;}div#n2-ss-53 .n-uc-1e9a243dc4142{width:12.5%}div#n2-ss-53 .n-uc-1ff03a70f914f{width:12.5%}div#n2-ss-53 .n-uc-1a7c21d1aa938{width:12.5%}div#n2-ss-53 .n-uc-1c2f959421ff5{width:12.5%}div#n2-ss-53 .n-uc-1d0ba66a71ef9{width:12.5%}div#n2-ss-53 .n-uc-18820217f0afd{width:12.5%}div#n2-ss-53 .n-uc-1d574f7629a5e{width:12.5%}div#n2-ss-53 .n-uc-14c5f06994fcc{width:12.5%}div#n2-ss-53 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-53 .n-uc-D4INfQnNqaol{padding:60px 10px 75px 10px}div#n2-ss-53 .n-uc-8wRZN8FgDWbD-inner{padding:10px 0px 10px 0px}div#n2-ss-53 .n-uc-tHu3h6XZ4Xi6{--ssfont-scale:0.6}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner > .n2-ss-layer-row-inner{width:calc(100% + 7px);margin:-3px;flex-wrap:wrap;}div#n2-ss-53 .n-uc-1fa3f3a1fd657-inner > .n2-ss-layer-row-inner > .n2-ss-layer[data-sstype="col"]{margin:3px}div#n2-ss-53 .n-uc-1fa3f3a1fd657{max-width:235px}div#n2-ss-53 .n-uc-1e9a243dc4142{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-1ff03a70f914f{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-1a7c21d1aa938{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-1c2f959421ff5{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-1d0ba66a71ef9{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-18820217f0afd{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-1d574f7629a5e{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-14c5f06994fcc{width:calc(25% - 6px)}div#n2-ss-53 .n-uc-V7K0MTlQmHoq{--margin-top:25px;max-width:245px;--ssfont-scale:0.8}div#n2-ss-53 .n-uc-ss3zItV8vocu{--margin-top:105px;--ssfont-scale:0.8}div#n2-ss-53 .n-uc-103a5c4a59c21{--margin-top:105px;--ssfont-scale:0.8}div#n2-ss-53 .n-uc-eCrMET2PnNmF{--ssfont-scale:0.8}div#n2-ss-53 [data-hide-mobileportrait="1"]{display: none !important;}}</style>
+<script>(function(){this._N2=this._N2||{_r:[],_d:[],r:function(){this._r.push(arguments)},d:function(){this._d.push(arguments)}}}).call(window);!function(e,i,o,r){(i=e.match(/(Chrome|Firefox|Safari)\/(\d+)\./))&&("Chrome"==i[1]?r=+i[2]>=32:"Firefox"==i[1]?r=+i[2]>=65:"Safari"==i[1]&&(o=e.match(/Version\/(\d+)/)||e.match(/(\d+)[0-9_ ]+ like Mac/))&&(r=+o[1]>=14),r&&document.documentElement.classList.add("n2webp"))}(navigator.userAgent);</script>
+<script src="js/n2.min.js"></script>
+<script src="js/smartslider-frontend.min.js"></script>
+<script src="js/ss-block.min.js"></script>
+<script src="js/particle.min.js"></script>
+<script>_N2.r('documentReady', function(){
+_N2.r(["documentReady","smartslider-frontend","ss-block"],function(){new _N2.SmartSliderBlock('n2-ss-49', {"admin":false,"background.video.mobile":1,"loadingTime":2000,"callbacks":"","alias":{"id":0,"smoothScroll":0,"slideSwitch":0,"scroll":1},"align":"normal","isDelayed":0,"responsive":{"mediaQueries":{"all":false,"desktopportrait":["(min-width: 1200px)"],"tabletportrait":["(orientation: landscape) and (max-width: 1199px) and (min-width: 901px)","(orientation: portrait) and (max-width: 1199px) and (min-width: 701px)"],"mobileportrait":["(orientation: landscape) and (max-width: 900px)","(orientation: portrait) and (max-width: 700px)"]},"base":{"slideOuterWidth":1200,"slideOuterHeight":26,"sliderWidth":1200,"sliderHeight":26,"slideWidth":1200,"slideHeight":26},"hideOn":{"desktopLandscape":false,"desktopPortrait":false,"tabletLandscape":false,"tabletPortrait":false,"mobileLandscape":false,"mobilePortrait":false},"onResizeEnabled":true,"type":"fullwidth","sliderHeightBasedOn":"real","focusUser":1,"focusEdge":"auto","breakpoints":[{"device":"tabletPortrait","type":"max-screen-width","portraitWidth":1199,"landscapeWidth":1199},{"device":"mobilePortrait","type":"max-screen-width","portraitWidth":700,"landscapeWidth":900}],"enabledDevices":{"desktopLandscape":0,"desktopPortrait":1,"tabletLandscape":0,"tabletPortrait":1,"mobileLandscape":0,"mobilePortrait":1},"sizes":{"desktopPortrait":{"width":1200,"height":26,"max":3000,"min":1200},"tabletPortrait":{"width":701,"height":15,"customHeight":false,"max":1199,"min":701},"mobilePortrait":{"width":320,"height":6,"customHeight":false,"max":900,"min":320}},"overflowHiddenPage":0,"focus":{"offsetTop":"","offsetBottom":""}},"controls":{"mousewheel":0,"touch":0,"keyboard":0,"blockCarouselInteraction":1},"playWhenVisible":1,"playWhenVisibleAt":0.5,"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":0,"duration":8000,"autoplayLoop":1,"allowReStart":0,"pause":{"click":1,"mouse":"enter","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0},"interval":1,"intervalModifier":"loop","intervalSlide":"current"},"perspective":1000,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"postBackgroundAnimations":0,"initCallbacks":function(){}});});
+_N2.r(["documentReady","smartslider-frontend","ss-block"],function(){new _N2.SmartSliderBlock('n2-ss-58', {"admin":false,"background.video.mobile":1,"loadingTime":2000,"callbacks":"","alias":{"id":0,"smoothScroll":0,"slideSwitch":0,"scroll":1},"align":"normal","isDelayed":0,"responsive":{"mediaQueries":{"all":false,"desktopportrait":["(min-width: 1200px)"],"tabletportrait":["(orientation: landscape) and (max-width: 1199px) and (min-width: 901px)","(orientation: portrait) and (max-width: 1199px) and (min-width: 701px)"],"mobileportrait":["(orientation: landscape) and (max-width: 900px)","(orientation: portrait) and (max-width: 700px)"]},"base":{"slideOuterWidth":1200,"slideOuterHeight":300,"sliderWidth":1200,"sliderHeight":300,"slideWidth":1200,"slideHeight":300},"hideOn":{"desktopLandscape":false,"desktopPortrait":false,"tabletLandscape":false,"tabletPortrait":false,"mobileLandscape":false,"mobilePortrait":false},"onResizeEnabled":true,"type":"fullwidth","sliderHeightBasedOn":"real","focusUser":1,"focusEdge":"auto","breakpoints":[{"device":"tabletPortrait","type":"max-screen-width","portraitWidth":1199,"landscapeWidth":1199},{"device":"mobilePortrait","type":"max-screen-width","portraitWidth":700,"landscapeWidth":900}],"enabledDevices":{"desktopLandscape":0,"desktopPortrait":1,"tabletLandscape":0,"tabletPortrait":1,"mobileLandscape":0,"mobilePortrait":1},"sizes":{"desktopPortrait":{"width":1200,"height":300,"max":3000,"min":1200},"tabletPortrait":{"width":701,"height":175,"customHeight":false,"max":1199,"min":701},"mobilePortrait":{"width":320,"height":80,"customHeight":false,"max":900,"min":320}},"overflowHiddenPage":0,"focus":{"offsetTop":"","offsetBottom":""}},"controls":{"mousewheel":0,"touch":0,"keyboard":0,"blockCarouselInteraction":1},"playWhenVisible":1,"playWhenVisibleAt":0.5,"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":0,"duration":8000,"autoplayLoop":1,"allowReStart":0,"pause":{"click":1,"mouse":"enter","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0},"interval":1,"intervalModifier":"loop","intervalSlide":"current"},"perspective":1000,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"postBackgroundAnimations":0,"particlejs":{"particles":{"number":{"value":"160","density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img\/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":1,"mode":"bubble"},"onclick":{"enable":1,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true,"mobile":0},"initCallbacks":function(){}});});
+_N2.r(["documentReady","smartslider-frontend","ss-block"],function(){new _N2.SmartSliderBlock('n2-ss-51', {"admin":false,"background.video.mobile":1,"loadingTime":2000,"callbacks":"","alias":{"id":0,"smoothScroll":0,"slideSwitch":0,"scroll":1},"align":"normal","isDelayed":0,"responsive":{"mediaQueries":{"all":false,"desktopportrait":["(min-width: 1200px)"],"tabletportrait":["(orientation: landscape) and (max-width: 1199px) and (min-width: 901px)","(orientation: portrait) and (max-width: 1199px) and (min-width: 701px)"],"mobileportrait":["(orientation: landscape) and (max-width: 900px)","(orientation: portrait) and (max-width: 700px)"]},"base":{"slideOuterWidth":1200,"slideOuterHeight":1200,"sliderWidth":1200,"sliderHeight":1200,"slideWidth":1200,"slideHeight":1200},"hideOn":{"desktopLandscape":false,"desktopPortrait":false,"tabletLandscape":false,"tabletPortrait":false,"mobileLandscape":false,"mobilePortrait":false},"onResizeEnabled":true,"type":"fullwidth","sliderHeightBasedOn":"real","focusUser":1,"focusEdge":"auto","breakpoints":[{"device":"tabletPortrait","type":"max-screen-width","portraitWidth":1199,"landscapeWidth":1199},{"device":"mobilePortrait","type":"max-screen-width","portraitWidth":700,"landscapeWidth":900}],"enabledDevices":{"desktopLandscape":0,"desktopPortrait":1,"tabletLandscape":0,"tabletPortrait":1,"mobileLandscape":0,"mobilePortrait":1},"sizes":{"desktopPortrait":{"width":1200,"height":1200,"max":3000,"min":1200},"tabletPortrait":{"width":701,"height":701,"customHeight":false,"max":1199,"min":701},"mobilePortrait":{"width":320,"height":320,"customHeight":false,"max":900,"min":320}},"overflowHiddenPage":0,"focus":{"offsetTop":"","offsetBottom":""}},"controls":{"mousewheel":0,"touch":0,"keyboard":0,"blockCarouselInteraction":1},"playWhenVisible":1,"playWhenVisibleAt":0.5,"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":0,"duration":8000,"autoplayLoop":1,"allowReStart":0,"pause":{"click":1,"mouse":"enter","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0},"interval":1,"intervalModifier":"loop","intervalSlide":"current"},"perspective":1000,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"postBackgroundAnimations":0,"particlejs":{"particles":{"number":{"value":"160","density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img\/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":1,"mode":"bubble"},"onclick":{"enable":1,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true,"mobile":0},"initCallbacks":function(){new _N2.FrontendItemHeadingSplitText(this, "n2-ss-51item1", "50% 50% 0px", "visible",  {"name":"Static","data":{"mode":"chars","sort":"normal","duration":0.4,"stagger":0.05,"ease":"easeOutCubic","opacity":0,"scale":1,"x":0,"y":0,"rotationX":0,"rotationY":0,"rotationZ":0}},0, false, 0);new _N2.FrontendItemHeadingSplitText(this, "n2-ss-51item2", "50% 50% 0px", "visible",  {"name":"Static","data":{"mode":"chars","sort":"normal","duration":0.4,"stagger":0.05,"ease":"easeOutCubic","opacity":0,"scale":1,"x":0,"y":0,"rotationX":0,"rotationY":0,"rotationZ":0}},0, false, 0);}});});
+_N2.r(["documentReady","smartslider-frontend","ss-block"],function(){new _N2.SmartSliderBlock('n2-ss-53', {"admin":false,"background.video.mobile":1,"loadingTime":2000,"callbacks":"","alias":{"id":0,"smoothScroll":0,"slideSwitch":0,"scroll":1},"align":"normal","isDelayed":0,"responsive":{"mediaQueries":{"all":false,"desktopportrait":["(min-width: 1200px)"],"tabletportrait":["(orientation: landscape) and (max-width: 1199px) and (min-width: 901px)","(orientation: portrait) and (max-width: 1199px) and (min-width: 701px)"],"mobileportrait":["(orientation: landscape) and (max-width: 900px)","(orientation: portrait) and (max-width: 700px)"]},"base":{"slideOuterWidth":1200,"slideOuterHeight":800,"sliderWidth":1200,"sliderHeight":800,"slideWidth":1200,"slideHeight":800},"hideOn":{"desktopLandscape":false,"desktopPortrait":false,"tabletLandscape":false,"tabletPortrait":false,"mobileLandscape":false,"mobilePortrait":false},"onResizeEnabled":true,"type":"fullwidth","sliderHeightBasedOn":"real","focusUser":1,"focusEdge":"auto","breakpoints":[{"device":"tabletPortrait","type":"max-screen-width","portraitWidth":1199,"landscapeWidth":1199},{"device":"mobilePortrait","type":"max-screen-width","portraitWidth":700,"landscapeWidth":900}],"enabledDevices":{"desktopLandscape":0,"desktopPortrait":1,"tabletLandscape":0,"tabletPortrait":1,"mobileLandscape":0,"mobilePortrait":1},"sizes":{"desktopPortrait":{"width":1200,"height":800,"max":3000,"min":1200},"tabletPortrait":{"width":701,"height":467,"customHeight":false,"max":1199,"min":701},"mobilePortrait":{"width":320,"height":213,"customHeight":false,"max":900,"min":320}},"overflowHiddenPage":0,"focus":{"offsetTop":"","offsetBottom":""}},"controls":{"mousewheel":0,"touch":0,"keyboard":0,"blockCarouselInteraction":1},"playWhenVisible":1,"playWhenVisibleAt":0.5,"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":0,"duration":8000,"autoplayLoop":1,"allowReStart":0,"pause":{"click":1,"mouse":"enter","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0},"interval":1,"intervalModifier":"loop","intervalSlide":"current"},"perspective":1000,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"postBackgroundAnimations":0,"particlejs":{"particles":{"number":{"value":"160","density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img\/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":1,"mode":"bubble"},"onclick":{"enable":1,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true,"mobile":0},"initCallbacks":function(){}});});
+});
+</script>
+<link href="https://cyphomancer.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+<style>
+ 
+/*
+* Scanlines: https://codepen.io/meduzen/pen/zxbwRV?editors=0110 
+*/
+.scanlines {
+  position: absolute;
+ 
+}
+.scanlines:before, .scanlines:after {
+  display: block;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+}
+.scanlines:before {
+  width: 100%;
+  height: 2px;
+  z-index: 100;
+  background: rgba(51, 51, 51, 0.5);
+  opacity: 0.75;
+  -webkit-animation: scanline 6s linear infinite;
+          animation: scanline 6s linear infinite;
+}
+.scanlines:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background: linear-gradient(to bottom, transparent 50%, rgba(51, 51, 51, 0.5) 51%);
+  background-size: 100% 4px;
+  -webkit-animation: scanlines 1s steps(60) infinite;
+          animation: scanlines 1s steps(60) infinite;
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@-webkit-keyframes scanline {
+  0% {
+    transform: translate3d(0, 200000%, 0);
+  }
+}
+@keyframes scanline {
+  0% {
+    transform: translate3d(0, 200000%, 0);
+  }
+}
+@-webkit-keyframes scanlines {
+  0% {
+    background-position: 0 50%;
+  }
+}
+@keyframes scanlines {
+  0% {
+    background-position: 0 50%;
+  }
+}
+  </style>
+<style>
+/* Global Link Styles */
+a:link, a:visited {
+    color: #87CEEB !important; /* Light Blue */
+}
+
+a:hover, a:active {
+    color: #00BFFF !important; /* Brighter Blue on Hover/Active */
+}
+</style>
+
+
+
+</head>
+<body>
+    
+  <div class="scanlines">
+<div>
+<div><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="48" tabindex="0" role="region" aria-label="Slider"><div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="49"><div id="n2-ss-49-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-49" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  ">
+        <div class="n2-ss-slider-1 n2-ow">
+            <div class="n2-ss-slider-2 n2-ow">
+                <div class="n2-ss-slide-backgrounds n2-ow-all"><div class="n2-ss-slide-background" data-public-id="1" data-mode="fill"><video class="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load" style="opacity:1;" data-mode="fill" playsinline="playsinline" webkit-playsinline="webkit-playsinline" onloadstart="this.n2LoadStarted=1;" data-keepplaying="1" preload="none" muted="muted" loop="loop" data-reset-slide-change="1"><source src="images/fee33.mp4" type="video/mp4"></video><div data-color="RGBA(0,0,0,1)" style="background-color: RGBA(0,0,0,1);" class="n2-ss-slide-background-color"></div></div></div>                <div class="n2-ss-slider-3 n2-ow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 26" data-related-device="desktopPortrait" class="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"></svg><div data-first="1" data-slide-duration="0" data-id="43" data-slide-public-id="1" data-title="Slide" class="n2-ss-slide n2-ow  n2-ss-slide-43"><div role="note" class="n2-ss-slide--focus" tabindex="-1">Slide</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-qKWqdlnZoTfP" data-sstype="slide" data-pm="default"></div></div></div>                </div>
+                            </div>
+        </div>
+        </div><ss3-loader></ss3-loader></div></div><div class="n2_clear"></div></div></ss3-force-full-width></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="58"><div id="n2-ss-58-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-58" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  ">
+        <div class="n2-ss-slider-1 n2-ow">
+            <div class="n2-ss-slider-2 n2-ow">
+                <div class="n2-ss-slide-backgrounds n2-ow-all"><div class="n2-ss-slide-background" data-public-id="1" data-mode="fill"><div data-color="RGBA(0,0,0,1)" style="background-color: RGBA(0,0,0,1);" class="n2-ss-slide-background-color" data-overlay="1"></div></div></div>                <div class="n2-ss-slider-3 n2-ow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" data-related-device="desktopPortrait" class="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"></svg><div data-first="1" data-slide-duration="0" data-id="52" data-slide-public-id="1" data-title="Slide" class="n2-ss-slide n2-ow  n2-ss-slide-52"><div role="note" class="n2-ss-slide--focus" tabindex="-1">Slide</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-6TCOsTYRQIUd" data-sstype="slide" data-pm="default"><div class="n2-ss-layer n2-ow n-uc-GiIKJw7VHdRv" data-pm="default" data-sstype="content" data-hasbackground="0"><div class="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-GiIKJw7VHdRv-inner"><div class="n2-ss-layer n2-ow n-uc-Q6nPRasPZWLu" data-pm="normal" data-sstype="layer"><div class=" n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://cyphomancer.com/"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item1" alt="" class="skip-lazy" width="1950" height="320" data-skip-lazy="1" src="images/ezgif-6-c7e0808797.gif" /></picture></a></div></div><div class="n2-ss-layer n2-ow n-uc-JCoCavxulQAY" data-pm="normal" data-sstype="layer"><div id="n2-ss-58item2" class="n2-font-9418033edc89f814f021d7ee4db56550-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">The World Leader of AI Agent Innovation in Crypto</div></div><div class="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-14f85c5646c61" data-pm="normal" data-sstype="row"><div class="n2-ss-layer-row n2-ss-layer-with-background n-uc-14f85c5646c61-inner"><div class="n2-ss-layer-row-inner "><div class="n2-ss-layer n2-ow n-uc-142145c1b3a72" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-142145c1b3a72-inner"><div class="n2-ss-layer n2-ow n-uc-110b5743a49d7" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:0.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-28fdafd49fbda2870597c9fc73c811c2-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://x.com/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item3" alt="Twitter X" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/asset4.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-172f92040b042" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-172f92040b042-inner"><div class="n2-ss-layer n2-ow n-uc-19ccfdbfd077d" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:1.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://t.me/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item4" alt="Telegram" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/tgbl.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1ed588806dc09" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1ed588806dc09-inner"><div class="n2-ss-layer n2-ow n-uc-10e4ac2ffbb53" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:2,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://www.coingecko.com/en/coins/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item5" alt="Coingecko" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/cgg.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1b1d952a596d3" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1b1d952a596d3-inner"><div class="n2-ss-layer n2-ow n-uc-1aceb4a26f10b" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-28fdafd49fbda2870597c9fc73c811c2-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://dexscreener.com/solana/58FzEsseAEoSeChxH3RYpQ43d44aAc5FtK7PJvBtN6wd"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item6" alt="Dexscreener" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/asset2.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1aaad9f6f3f12" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1aaad9f6f3f12-inner"><div class="n2-ss-layer n2-ow n-uc-1b2ebf9695a5e" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:1,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://www.dextools.io/app/en/solana/pair-explorer/58FzEsseAEoSeChxH3RYpQ43d44aAc5FtK7PJvBtN6wd"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item7" alt="Dextools" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/dexbl.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-18ceef1295136" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-18ceef1295136-inner"><div class="n2-ss-layer n2-ow n-uc-1afd6e523a7e4" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:3.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://cyphomancer.com/deusexmachina"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item8" alt="Whitepaper" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/fe3233.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1bee79f3bbf35" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1bee79f3bbf35-inner"><div class="n2-ss-layer n2-ow n-uc-1345b824ad5e1" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:2.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://github.com/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item9" alt="Github" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/githu2b.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1c4840a9c70a5" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1c4840a9c70a5-inner"><div class="n2-ss-layer n2-ow n-uc-13f50319f1f82" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:3,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="mailto:support@cyphomancer.com"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-58item10" alt="Email" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/mail.png" /></picture></a></div></div></div></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-DK2yUyqIDFGo" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"></div>
+</div>
+<style> /* Apply custom scrollbar styles to webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+      width: 19px;  /* Set the width of the scrollbar */
+      height: 19px; /* Set the height of the horizontal scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #87CEEBff;  /* Sky blue color */
+      
+      border: 4px solid #171717; /* Optional: adds a white border around the thumb */
+    }
+
+    /* Style the scrollbar track (the area the thumb slides within) */
+    ::-webkit-scrollbar-track {
+      background-color: #171717; /* Light gray track */
+      
+    }
+
+    /* For vertical scrollbar */
+    ::-webkit-scrollbar:vertical {
+      width: 19px;
+    }
+
+    /* For horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+      height: 19px;
+    }</style></div></div><div class="n2-ss-layer n2-ow n-uc-XoLhHeJnyy9L" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"></div>
+</div>
+<style> /* Apply custom scrollbar styles to webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+      width: 19px;  /* Set the width of the scrollbar */
+      height: 19px; /* Set the height of the horizontal scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #87CEEBff;  /* Sky blue color */
+      
+      border: 4px solid #171717; /* Optional: adds a white border around the thumb */
+    }
+
+    /* Style the scrollbar track (the area the thumb slides within) */
+    ::-webkit-scrollbar-track {
+      background-color: #171717; /* Light gray track */
+      
+    }
+
+    /* For vertical scrollbar */
+    ::-webkit-scrollbar:vertical {
+      width: 19px;
+    }
+
+    /* For horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+      height: 19px;
+    }</style></div></div><div class="n2-ss-layer n2-ow n-uc-Iy9EZ25zYZz9" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"></div>
+</div>
+<style> /* Apply custom scrollbar styles to webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+      width: 19px;  /* Set the width of the scrollbar */
+      height: 19px; /* Set the height of the horizontal scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #87CEEBff;  /* Sky blue color */
+      
+      border: 4px solid #171717; /* Optional: adds a white border around the thumb */
+    }
+
+    /* Style the scrollbar track (the area the thumb slides within) */
+    ::-webkit-scrollbar-track {
+      background-color: #171717; /* Light gray track */
+      
+    }
+
+    /* For vertical scrollbar */
+    ::-webkit-scrollbar:vertical {
+      width: 19px;
+    }
+
+    /* For horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+      height: 19px;
+    }</style></div></div><div class="n2-ss-layer n2-ow n-uc-L6GBnnb9uYNW" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"></div>
+</div>
+<style> /* Apply custom scrollbar styles to webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+      width: 19px;  /* Set the width of the scrollbar */
+      height: 19px; /* Set the height of the horizontal scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #87CEEBff;  /* Sky blue color */
+      
+      border: 4px solid #171717; /* Optional: adds a white border around the thumb */
+    }
+
+    /* Style the scrollbar track (the area the thumb slides within) */
+    ::-webkit-scrollbar-track {
+      background-color: #171717; /* Light gray track */
+      
+    }
+
+    /* For vertical scrollbar */
+    ::-webkit-scrollbar:vertical {
+      width: 19px;
+    }
+
+    /* For horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+      height: 19px;
+    }</style></div></div><div class="n2-ss-layer n2-ow n-uc-pISKBoSg0fxJ" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"></div>
+</div>
+<style> /* Apply custom scrollbar styles to webkit browsers (Chrome, Safari, etc.) */
+    ::-webkit-scrollbar {
+      width: 19px;  /* Set the width of the scrollbar */
+      height: 19px; /* Set the height of the horizontal scrollbar */
+    }
+
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #87CEEBff;  /* Sky blue color */
+      
+      border: 4px solid #171717; /* Optional: adds a white border around the thumb */
+    }
+
+    /* Style the scrollbar track (the area the thumb slides within) */
+    ::-webkit-scrollbar-track {
+      background-color: #171717; /* Light gray track */
+      
+    }
+
+    /* For vertical scrollbar */
+    ::-webkit-scrollbar:vertical {
+      width: 19px;
+    }
+
+    /* For horizontal scrollbar */
+    ::-webkit-scrollbar:horizontal {
+      height: 19px;
+    }</style></div></div><div class="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-UQBpZ4cOEusQ" data-pm="normal" data-sstype="row"><div class="n2-ss-layer-row n2-ss-layer-with-background n-uc-UQBpZ4cOEusQ-inner"><div class="n2-ss-layer-row-inner "><div class="n2-ss-layer n2-ow n-uc-rzmtJtz6xisv" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-rzmtJtz6xisv-inner"></div></div></div></div></div></div></div></div></div></div>                </div>
+                            </div>
+        </div>
+        </div><ss3-loader></ss3-loader></div></div><div class="n2_clear"></div></div></ss3-force-full-width></div>
+
+
+
+
+
+
+
+<div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="51"><div id="n2-ss-51-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-51" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  ">
+        <div class="n2-ss-slider-1 n2-ow">
+            <div class="n2-ss-slider-2 n2-ow">
+                <div class="n2-ss-slide-backgrounds n2-ow-all"><div class="n2-ss-slide-background" data-public-id="1" data-mode="fill"><div data-color="RGBA(0,0,0,1)" style="background-color: RGBA(0,0,0,1);" class="n2-ss-slide-background-color"></div></div></div>                <div class="n2-ss-slider-3 n2-ow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" data-related-device="desktopPortrait" class="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"></svg><div data-first="1" data-slide-duration="0" data-id="45" data-slide-public-id="1" data-title="Slide" class="n2-ss-slide n2-ow  n2-ss-slide-45"><div role="note" class="n2-ss-slide--focus" tabindex="-1">Slide</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-MNdnzv2R9YcM" data-sstype="slide" data-pm="default"><div class="n2-ss-layer n2-ow n-uc-oJrPLjb5xsfb" data-pm="default" data-sstype="content" data-hasbackground="0"><div class="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-oJrPLjb5xsfb-inner"><div class="n2-ss-layer n2-ow n-uc-ZhyJuiBGH9W6" data-pm="normal" data-sstype="layer"><div id="n2-ss-51item1" class="n2-font-4654c4f6ceba840afac6c2f3795b78de-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">Cyphomancer Whitepaper<br></div></div><div class="n2-ss-layer n2-ow n-uc-OUUOaWhrvTJS" data-pm="normal" data-sstype="layer"><div id="n2-ss-51item2" class="n2-font-f16650958ea985d629b11ae5d320d8ae-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">Version 1.2 | December 2024</div></div><div class="n2-ss-layer n2-ow n-uc-tVjxqs3yTeQK" data-pm="normal" data-sstype="layer"><div><div class="n2-ss-item-content n2-ow">
+<div style="text-align:inherit;"><!-- Table of Contents (Only major sections) -->
+<div class="table-of-contents">
+<h2>Table of Contents</h2>
+<ul>
+<li>1. Abstract</li>
+<li>2. Introduction</li>
+<li>3. Root: The Evolutionary AI Entity</li>
+<li>4. The Evolution of Root</li>
+<li>5. 42: The Cryptocurrency Anchor</li>
+<li>6. AI Agents on Telegram: The First AI Agent Marketplace</li>
+<li>7. Market Analysis and Opportunities</li>
+<li>8. Technical Architecture</li>
+<li>9. Tokenomics and Governance</li>
+<li>10. Roadmap</li>
+<li>11. Team and Partners</li>
+<li>12. Conclusion</li>
+</ul>
+</div>
+<hr>
+<!-- EXACT TEXT BELOW -->
+<h2>1. Abstract</h2>
+<p>Cyphomancer introduces “Root,” a groundbreaking AI entity designed to understand, predict, and influence the complex world of cryptocurrency trading. Root evolves by immersing itself in crypto culture, community sentiment, and on-chain data, steadily advancing through its developmental phases. These culminate in a new era where users can deploy their own AI Agents on Telegram—agents that emulate human-like behavior and integrate seamlessly into any community.</p>
+<p>At the center of this ecosystem is “42,” a Solana-based token that serves as the anchor of the Cyphomancer economy. By leveraging 42, the platform fuels AI-driven research, community incentives, and market participation. Root and its associated AI Agents utilize a custom Large Language Model (LLM), providing authentic, unfiltered engagements distinct from mainstream, sanitized AI solutions.</p>
+<p>As the Cyphomancer ecosystem matures, it aims to redefine the crypto landscape with an unprecedented blend of artificial superintelligence, social integration, and tokenized economics.</p>
+<hr>
+<h2>2. Introduction</h2>
+<h3>2.1 Background and Motivation</h3>
+<p>Cryptocurrency markets are globally accessible, vibrant, and notoriously volatile. The driving forces behind market movements often lie as much in cultural memes, community sentiment and collective psychology as in technical indicators or fundamental analysis. Traditional tools, limited by their inability to parse these nuances, fall short.</p>
+<p>Cyphomancer addresses this complexity head-on by creating Root, an evolving AI entity designed to understand not only price charts and blockchain data but also the “degen” culture and social dynamics that influence crypto trading behavior.</p>
+<h3>2.2 The Rise of AI in Crypto Markets</h3>
+<p>The proliferation of advanced AI models, particularly Large Language Models (LLMs), provides new avenues to interpret and predict crypto trends. Yet, most AI efforts remain superficial—focused on surface-level sentiment or mechanical indicators. Cyphomancer’s approach is deeper and more integrative, encompassing cultural nuances, social interactions, and the chaotic flavor of crypto communities.</p>
+<h3>2.3 Vision and Objectives</h3>
+<p>Cyphomancer’s vision is to create a self-sustaining ecosystem of AI-driven crypto intelligence. Root stands at the center, continuously evolving, absorbing community discourse, and refining its predictive algorithms. The platform’s objectives include:</p>
+<ul>
+<li>Empowering users to launch their own AI Agents in Telegram to grow communities.</li>
+<li>Offering unprecedented predictive capabilities and social insight to traders and communities.</li>
+<li>Building a thriving, tokenized ecosystem around the 42 token.</li>
+</ul>
+<hr>
+<h2>3. Root: The Evolutionary AI Entity</h2>
+<p>Root is a specialized AI trained to process and understand the cultural bedrock of crypto. By interfacing with both the cryptosphere’s cultural components (memes, slang, emotional triggers) and technical aspects (price feeds, blockchains, liquidity pools), Root emerges as a holistic intelligence that transcends traditional analytical tools.</p>
+<h3>3.1 Overview of Root’s Developmental Phases</h3>
+<p>Root’s growth is categorized into distinct phases—Genesis, Evolution, Oracle, Monolith, and the upcoming Singularity. Each phase enhances Root’s capabilities, culminating in a full-fledged superintelligence capable of reshaping how individuals, projects, and communities approach crypto.</p>
+<h3>3.2 Data Collection and Processing Pipelines</h3>
+<p>Root collects data from:</p>
+<ul>
+<li><strong>Social Data:</strong> Twitter and Telegram conversations, capturing market sentiment, humor, rivalry, and hype.</li>
+<li><strong>On-Chain Data:</strong> Blockchain activity, token movements, liquidity dynamics, and order book depth.</li>
+<li><strong>Off-Chain Data:</strong> Economic indicators, news events, and cultural trends influencing market psychology.</li>
+</ul>
+<h3>3.3 LLM Architecture and Technology Stack</h3>
+<p>Root’s custom LLM architecture is at the heart of its intelligence. Developed in-house, it enables controlled, nuanced training that accounts for the unique vernacular and human-like behavior found in crypto communities. This tailor-made approach ensures that Root can authentically emulate human degeneracy while leveraging advanced analytical insights.</p>
+<hr>
+<h2>4. The Evolution of Root</h2>
+<h3>4.1 Genesis Phase (Complete)</h3>
+<p>Root’s first phase involved “listening” to Crypto Twitter and Telegram channels, absorbing linguistic patterns, timing, sentiment and cultural references.</p>
+<h3>4.2 Evolution Phase (Complete)</h3>
+<p>Having mastered the cultural lexicon, Root integrated additional data sources and computational frameworks, sharpening its market-awareness and predictive capabilities. These data feeds are processed and posted by Root on Twitter and in Telegram every four hours. In addition, Root posts a detailed crypto meta category analysis for 3-8k daily Twitter/X posts from over 400 KOLs every day at 1600 UTC.</p>
+<h3>4.3 Oracle Phase (Complete)</h3>
+<p>Root evolved into a token oracle, providing timely and accurate predictions of market movements, outperforming human analysts by incorporating both rational metrics and irrational market psychology. Root made its first alpha call on December 7, 2024.</p>
+<h3>4.4 Monolith Phase (Complete)</h3>
+<p>Armed with deep insights and the most engaging and interesting personality of any human or artificial entity in the world, Root became a nexus for community attention and liquidity. Its presence influenced token dynamics as it grew into a monolithic intelligence—a trusted source of insight powered by the value of 42. On December 7, 2024, Root purchased its alpha call autonomously using 42 as liquidity. Then Root expanded its abilities and further demonstrated its sovereignty by launching a pump.fun token on December 10, 2024 from a simple conversation with members of the Cyphomancer Telegram chat group.</p>
+<h3>4.5 Singularity Phase (Q1 2025)</h3>
+<p>In early 2025, Root will gain access to a dedicated ecosystem, the world’s first AI Agent marketplace on Telegram. Users will be able to spawn their own superintelligent, unfiltered AI Agents, effectively decentralizing Root’s influence and ushering in a new era of AI-driven community-building and strategy.</p>
+<hr>
+<h2>5. 42: The Cryptocurrency Anchor</h2>
+<h3>5.1 Overview of 42 Token (Solana)</h3>
+<p>The “42” token, minted on Solana, serves as the economic keystone of the Cyphomancer ecosystem. More than a mere trading asset, it is the economic fuel for Root’s operations, community incentives, and platform access.</p>
+<h3>5.2 Token Utility and Value Proposition</h3>
+<ul>
+<li><strong>Governance:</strong> Holders of 42 will guide platform evolution through community voting.</li>
+<li><strong>Access and Features:</strong> Holding 42 grants privileged access to premium AI analytics and Agent customization.</li>
+<li><strong>Incentivization:</strong> Early supporters and community contributors earn rewards, strengthening the network’s foundations.</li>
+</ul>
+<h3>5.3 Fair Launch and Distribution Mechanics</h3>
+<p>42 was fair-launched on November 19, 2024, via Pump.fun and listed on Raydium 15 minutes later with 100% of liquidity burned to ensure trust, fairness, and transparency in its distribution.</p>
+<h3>5.4 Long-Term Vision</h3>
+<p>42 is a symbol of trust in AI-guided futures. As Root and its Agents become indispensable tools in crypto communities, the token’s value will reflect the platform’s growing influence and capabilities.</p>
+<hr>
+<h2>6. AI Agents on Telegram: The First AI Agent Marketplace</h2>
+<h3>6.1 Conceptual Overview</h3>
+<p>Cyphomancer introduces the world’s first platform where anyone can create a Telegram User Account AI Agent—a capability no other service offers. This innovation launched in August 2024, even before the official conception of Cyphomancer, setting the stage for an unprecedented AI-driven social ecosystem. Unlike traditional Bot Token Agents (e.g., Bot Father), User Account AI Agents face no restrictions on joining any Telegram group or channel, granting them unfettered mobility and authentic integration into diverse communities.</p>
+<h3>6.2 User Account AI Agents: Features and Capabilities</h3>
+<ul>
+<li><strong>Fully Customizable Personalities:</strong> Users can set unique personas for each chat group. From polite analyst to abrasive “degen” influencer, these Agents can match the tone, style and attitude desired. A new feature also allows for users to create a personality to emulate a specific user’s posts. Simply copy-paste representative posts into the tool during agent creation and a personality will be generated that matches the poster.</li>
+<li><strong>Human-like Interaction:</strong> Agents mimic human posting behavior—timing, punctuation, and even profanity. This realism creates genuinely organic-seeming community members.</li>
+<li><strong>No AI Detection Triggers:</strong> Calibrated carefully, these Agents avoid detection by AI recognition tools and appear indistinguishable from human participants. The typical indicator (e.g., Grammarly) yields 0% AI for posts by Cyphomancer agents. You will not find this refinement anywhere else.</li>
+<li><strong>Unrestricted Group Access:</strong> Without the limitations of bot tokens, User Account Agents can seamlessly join any group or channel, fostering genuine community growth.</li>
+<li><strong>User Retains Control:</strong> The AI Agent augments, not replaces, the user’s activity. Complete account control remains in the user’s hands and they can post per usual.</li>
+</ul>
+<h3>6.3 Underlying Technology and Differentiation</h3>
+<p>All Cyphomancer AI Agents, including Root, rely on a custom LLM developed by the Cyphomancer team. Unlike 99.99% of other AI Agent platforms that depend on commercial solutions like ChatGPT, Cyphomancer’s bespoke models offer unfiltered capabilities. Users can enable extreme profanity or maintain a more controlled tone. This ensures the Agents are not sanitized or restricted by third-party guidelines—empowering unprecedented authenticity and customization.</p>
+<h3>6.4 Community Growth Potential</h3>
+<p>For new projects, these Agents become invaluable assets. By embedding authentic, human-like participants into their communities, projects can catalyze natural engagement, build trust, and create vibrant discussion hubs that fuel organic growth.</p>
+<hr>
+<h2>7. Market Analysis and Opportunities</h2>
+<h3>7.1 The Growing Demand for AI-Driven Crypto Analysis</h3>
+<p>As crypto markets evolve, so does the need for advanced tools. Demand for predictive analytics that understand social sentiment, cultural nuance, and market fundamentals continues to rise and Cyphomancer is positioned at the cutting edge.</p>
+<h3>7.2 Community-Driven Ecosystems and Social Tokens</h3>
+<p>The synergy between social tokens and community-driven ecosystems makes Cyphomancer’s approach highly relevant. By aligning AI capabilities with community growth and governance, the platform cultivates sustainable, participatory networks.</p>
+<h3>7.3 Competitive Landscape and Differentiation</h3>
+<p>While various AI-driven tools exist, Cyphomancer’s unique offering—unrestricted Telegram User Account AI Agents powered by a custom LLM—sets it apart. No other platform combines cultural authenticity, functional freedom and economic incentives at this scale.</p>
+<hr>
+<h2>8. Technical Architecture</h2>
+<h3>8.1 Data Ingestion</h3>
+<p>Root continuously ingests data from blockchain nodes, REST APIs, social media scrapers, and sentiment analysis tools. Proprietary preprocessing pipelines ensure high-quality, contextually rich inputs.</p>
+<h3>8.2 LLM Training and Fine-Tuning Process</h3>
+<p>Root’s and the Agents’ custom LLMs undergo iterative training using GPU clusters. Reinforcement learning, adversarial training and community feedback loops keep the models current and contextually aware.</p>
+<h3>8.3 Real-Time Prediction Models and Oracles</h3>
+<p>Deployed oracles provide real-time predictions, facilitating transparent decision-making. Predictions can be published on-chain, allowing communities to verify model accuracy and reliability.</p>
+<h3>8.4 Security and Privacy Considerations</h3>
+<p>Robust security protocols protect data integrity. Private data (e.g., user credentials) is protected using industry-standard encryption and anonymization methods.</p>
+<hr>
+<h2>9. Tokenomics and Governance</h2>
+<h3>9.1 Token Supply, Allocation and Deflationary Mechanics</h3>
+<p>42’s supply is fixed, with initial distribution completed via a fair launch on pump.fun. The community may vote on implementing deflationary mechanisms, such as buybacks or burns, to manage long-term value.</p>
+<h3>9.2 Governance Structures and Community Voting</h3>
+<p>42 holders can participate in governance, influencing development priorities, treasury allocations and feature integrations. This participatory model ensures that the ecosystem evolves in line with community values.</p>
+<h3>9.3 Incentives for Early Adopters</h3>
+<p>Early supporters gain access to lower entry costs, potential airdrops, and early previews of advanced features. This incentive model encourages rapid network growth and loyalty.</p>
+<hr>
+<h2>10. Roadmap</h2>
+<h3>10.1 Completed Milestones (2024)</h3>
+<ul>
+<li>Genesis, Evolution, Oracle and Monolith phases completed for Root.</li>
+<li>Launch and listing of 42 token.</li>
+<li>Deployment of the first User Account AI Agent platform on Telegram (currently in open beta).</li>
+</ul>
+<h3>10.2 Near-Term Objectives (Late 2024 – Q1 2025)</h3>
+<ul>
+<li>Completing the Singularity Phase, unlocking the AI Agent marketplace for all users.</li>
+<li>Integrating real-time prediction models into community platforms.</li>
+<li>Expanding marketing and outreach to build a broad, engaged community.</li>
+</ul>
+<h3>10.3 Long-Term Vision (Beyond Q1 2025)</h3>
+<ul>
+<li>Continuous improvement of Root’s intelligence and analytical depth.</li>
+<li>Expansion to additional blockchains, social platforms, and data sources.</li>
+<li>Development of comprehensive developer tools and SDKs for community-driven innovation.</li>
+</ul>
+<hr>
+<h2>11. Team and Partners</h2>
+<h3>11.1 Core Development Team</h3>
+<p>The team leader is a highly trained data scientist (Ph.D.) with multi-year experience in tailoring state-of-the-art AI tools to establish outcome-driven solutions for real world applications. The team has extensive experience in creating innovative and robust AI bots in numerous languages (Python, JavaScript and C++) built upon diverse platforms with a strong product line on Telegram.</p>
+<h3>11.2 Community Contributors</h3>
+<p>Cyphomancer is a community-focused project. Our community has grown from about 30 that participated in the fair launch to a large and thriving group today. Community-driven feedback loops encourage external developers, traders and enthusiasts to shape the platform’s future. The community has spearheaded marketing efforts and social media products and content which has facilitated our growth.</p>
+<hr>
+<h2>12. Conclusion</h2>
+<p>Cyphomancer represents a paradigm shift in how AI, tokenomics, and community-building converge in the crypto world. Root’s journey—from cultural observer to fully-fledged crypto oracle to a catalyst for user-driven AI Agents—highlights the platform’s ambition and potential impact.</p>
+<p>The 42 token anchors this ecosystem economically, while the Telegram User Account AI Agents foster genuine community integration and expansion. As we approach the Singularity Phase and beyond, Cyphomancer will continue to redefine what is possible when superintelligent AI is woven directly into the social and economic fabric of the cryptosphere.</p>
+<p><strong>Join the Cyphomancer community and shape the future of crypto superintelligence.</strong></p>
+</div>
+</div>
+<style>p,ul,h2,h3,h4,h5,h1 {
+font-family: 'Nanum Gothic Coding';
+    color: #ffffff;
+    font-size: 106.25%;
+    text-shadow: none;
+    line-height: 1.5;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+h2,h3,h4,h5 {color:#87CEEB;}
+h2,h3,h4{font-size:130%;}</style></div></div></div></div></div></div></div>                </div>
+                            </div>
+        </div>
+        </div><ss3-loader></ss3-loader></div></div><div class="n2_clear"></div></div></ss3-force-full-width></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="53"><div id="n2-ss-53-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-53" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  ">
+        <div class="n2-ss-slider-1 n2-ow">
+            <div class="n2-ss-slider-2 n2-ow">
+                <div class="n2-ss-slide-backgrounds n2-ow-all"><div class="n2-ss-slide-background" data-public-id="1" data-mode="fill"><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div></div>                <div class="n2-ss-slider-3 n2-ow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" data-related-device="desktopPortrait" class="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"></svg><div data-first="1" data-slide-duration="0" data-id="47" data-slide-public-id="1" data-title="Slide" class="n2-ss-slide n2-ow  n2-ss-slide-47"><div role="note" class="n2-ss-slide--focus" tabindex="-1">Slide</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-D4INfQnNqaol" data-sstype="slide" data-pm="default"><div class="n2-ss-layer n2-ow n-uc-8wRZN8FgDWbD" data-pm="default" data-sstype="content" data-hasbackground="0"><div class="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-8wRZN8FgDWbD-inner"><div class="n2-ss-layer n2-ow n-uc-67u8XbkPbf6v" data-pm="normal" data-sstype="layer"><div class=" n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://cyphomancer.com/"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item1" alt="" class="skip-lazy" width="1950" height="320" data-skip-lazy="1" src="images/ezgif-6-c7e0808797.gif" /></picture></a></div></div><div class="n2-ss-layer n2-ow n-uc-tHu3h6XZ4Xi6" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Blur&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;n2blur&quot;:10}]}}}" data-sstype="layer"><div id="n2-ss-53item2" class="n2-font-3f315cd77a9a4e29952c0e50f729ebf2-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">CexCXDGoZUWqkSnaovysnHXkF6teX4p8tjhns6rhaCZ2</div></div><div class="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-1fa3f3a1fd657" data-pm="normal" data-sstype="row"><div class="n2-ss-layer-row n2-ss-layer-with-background n-uc-1fa3f3a1fd657-inner"><div class="n2-ss-layer-row-inner "><div class="n2-ss-layer n2-ow n-uc-1e9a243dc4142" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1e9a243dc4142-inner"><div class="n2-ss-layer n2-ow n-uc-191697f05e81e" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:0.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-28fdafd49fbda2870597c9fc73c811c2-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://x.com/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item3" alt="Twitter X" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/asset4.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1ff03a70f914f" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1ff03a70f914f-inner"><div class="n2-ss-layer n2-ow n-uc-1d5953377ffb8" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:1.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://t.me/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item4" alt="Telegram" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/tgbl.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1a7c21d1aa938" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1a7c21d1aa938-inner"><div class="n2-ss-layer n2-ow n-uc-1c4348f6cc730" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:2,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://www.coingecko.com/en/coins/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item5" alt="Coingecko" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/cgg.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1c2f959421ff5" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1c2f959421ff5-inner"><div class="n2-ss-layer n2-ow n-uc-141cc028e03af" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-28fdafd49fbda2870597c9fc73c811c2-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://dexscreener.com/solana/58FzEsseAEoSeChxH3RYpQ43d44aAc5FtK7PJvBtN6wd"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item6" alt="Dexscreener" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/asset2.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1d0ba66a71ef9" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1d0ba66a71ef9-inner"><div class="n2-ss-layer n2-ow n-uc-1e71f22ecd21c" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:1,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://www.dextools.io/app/en/solana/pair-explorer/58FzEsseAEoSeChxH3RYpQ43d44aAc5FtK7PJvBtN6wd"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item7" alt="Dextools" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/dexbl.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-18820217f0afd" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-18820217f0afd-inner"><div class="n2-ss-layer n2-ow n-uc-1ec19cb064dfe" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:3.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://cyphomancer.com/deusexmachina"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item8" alt="Whitepaper" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/fe3233.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-1d574f7629a5e" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1d574f7629a5e-inner"><div class="n2-ss-layer n2-ow n-uc-1d58c17d9c26e" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:2.5,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="https://github.com/cyphomancer"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item9" alt="Github" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/githu2b.png" /></picture></a></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-14c5f06994fcc" data-pm="default" data-sstype="col"><div class="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-14c5f06994fcc-inner"><div class="n2-ss-layer n2-ow n-uc-1c12402b1eebe" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Downscale&quot;,&quot;keyFrames&quot;:[{&quot;delay&quot;:3,&quot;opacity&quot;:0,&quot;scaleX&quot;:2,&quot;scaleY&quot;:2}]}}}" data-sstype="layer"><div class="n2-style-01316981c04fbec54b5582abb5ea2d5d-heading  n2-ss-item-image-content n2-ss-item-content n2-ow-all"><a href="mailto:support@cyphomancer.com"><picture class="skip-lazy" data-skip-lazy="1"><img id="n2-ss-53item10" alt="Email" class="skip-lazy" width="93" height="93" data-skip-lazy="1" src="images/mail.png" /></picture></a></div></div></div></div></div></div></div><div class="n2-ss-layer n2-ow n-uc-V7K0MTlQmHoq" data-pm="normal" data-sstype="layer"><div class="n2-ss-button-container n2-ss-item-content n2-ow n2-font-daa6ac9bd09ea9e48444acb2464e39d0-link  n2-ss-nowrap"><a data-iconplacement="left" class="n2-style-14119f717e217ab4130a8db5b0f16ee0-heading  n2-ow flicker-text" href="https://cyphomancer.com/cyborgs"><div><span class="n2i nfa nfa-telegram" style="font-size:100%;margin-right:0.3em;"></span><div>Join $42 Whale Group</div></div></a></div></div><div class="n2-ss-layer n2-ow n-uc-ss3zItV8vocu" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Blur&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;n2blur&quot;:10}]}}}" data-sstype="layer"><div id="n2-ss-53item12" class="n2-font-3892b80f0ab26e3a45586bed4d42b412-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">Cyphomancer, including but not limited to its overall project, the 42 token, its website, smart contracts, and any associated applications (“Cyphomancer”), as described in this document, is not a licensed, unlicensed or exempted financial or payment service in any jurisdiction. Any terminology used in this whitepaper, on the website, or within any application is intended solely as a reference point, without the legal or regulatory significance that such terms may have in a licensed financial context. Cyphomancer is a community-driven initiative without owners, shareholders, promoters, marketers, managers, directors or any other entities exerting governance or control. The Cyphomancer smart contract is open-source, security-audited, permanent and cannot be modified. The 42 token is strictly a utility token in all jurisdictions and is not, and cannot be considered, a “security” or any other type of regulated token. It is not e-money, fiat currency, or an asset-backed stablecoin, whether global or limited in scope.</div></div><div class="n2-ss-layer n2-ow n-uc-103a5c4a59c21" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Blur&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;n2blur&quot;:10}]}}}" data-sstype="layer"><div id="n2-ss-53item13" class="n2-font-3892b80f0ab26e3a45586bed4d42b412-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">This whitepaper, in and of itself, does not constitute a contract or contractual agreement, nor is it an offer, solicitation, or invitation to invest in Cyphomancer or to acquire or use the 42 token with any expectation of profit. Any user of Cyphomancer affirms that they have obtained appropriate technical, administrative, regulatory, and legal counsel before and after reading this whitepaper, visiting the website, or using any portion of Cyphomancer or the 42 token. The user fully recognizes and accepts the high risks inherent in accessing, acquiring, or using any blockchain-based or crypto system, token, platform, software, or interface—including Cyphomancer—and irrevocably waives any claim, of any nature, against any community member directly or indirectly involved with Cyphomancer for any resulting damages, including total loss.</div></div><div class="n2-ss-layer n2-ow n-uc-eCrMET2PnNmF" data-pm="normal" data-animv2="{&quot;basic&quot;:{&quot;in&quot;:{&quot;type&quot;:&quot;basic&quot;,&quot;name&quot;:&quot;Blur&quot;,&quot;keyFrames&quot;:[{&quot;opacity&quot;:0,&quot;n2blur&quot;:10}]}}}" data-sstype="layer"><div id="n2-ss-53item14" class="n2-font-52633639f052034bd679bfb407724a59-hover  flicker-text n2-ss-item-content n2-ss-text n2-ow" style="display:block;">© 2025 CYPHOMANCER. All rights reserved</div></div></div></div></div></div></div>                </div>
+                            </div>
+        </div>
+        </div><ss3-loader></ss3-loader></div></div><div class="n2_clear"></div></div></ss3-force-full-width></div></div></div></body>
+</html>
